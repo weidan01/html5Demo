@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>html5 canvas绘图</title>
+     <style type="text/css">
+        body{
+        	padding: 0px;
+        	margin: 0px;
+        }
+
+        .dcanvas{
+        	width: 300px;
+        	height: 200px;
+        	border: 1px solid red;
+        	padding: 0px;
+        	margin: 0px;
+        }
+
+        .icanvas{
+        	width: 317px;
+        	height: 317px;
+        	border: 1px solid red;
+        	padding: 0px;
+        	margin: 0px;
+        }
+
+
+        #scream{
+          width: 317px;
+          height: 226px;
+          display: none;
+        }
+     </style>
+   </head>
+   <body>
+
+   	   <!--填充颜色-->
+   	   <canvas id="colorcanvas" class="dcanvas"></canvas>
+
+       <!--画线-->
+   	   <canvas id="linecanvas" class="dcanvas"></canvas>
+
+   	   <!--画圆-->
+   	   <canvas id="arccanvas" class="dcanvas"></canvas>
+
+   	   <!--写字-->
+   	   <canvas id="wordcanvas" class="dcanvas"></canvas>
+
+   	   <!--渐变-->
+   	   <canvas id="gradient" class="dcanvas"></canvas>
+
+   	   <img id="scream" src="../images/tp_01.png"><p>Canvas:</p>
+
+   	   <!--图片-->
+   	   <canvas id="image" class="icanvas"></canvas>
+   </body>
+   <script type="text/javascript">
+
+      //===================================填充颜色======================================
+      //首先获取到元素
+       var c1 = document.getElementById("colorcanvas");
+
+      //创建context对象
+      var ctx1 = c1.getContext("2d");
+
+      //绘制对象
+      ctx1.fillStyle="#FF0000";  //fillStyle属性可以是css颜色，渐变或图案
+      ctx1.fillRect(20,10,150,75);//fillRect(x,y,width,height) 方法定义了矩形当前的填充方式
+
+      //=================================================================================
+
+      //===================================画线颜色======================================
+      //获取到元素
+      var c2 = document.getElementById("linecanvas");
+
+      //获取到上下文
+      var ctx2 = c2.getContext("2d");
+
+      //绘制直线
+      ctx2.moveTo(0,0);  //设置线的起点坐标
+      ctx2.lineTo(231,162); //设置线的终点目标
+      ctx2.stroke(); //stroke() 方法来绘制线条
+
+      //=================================================================================
+
+      //===================================画圆======================================
+      //获取到元素
+      var c3 = document.getElementById("arccanvas");
+
+      //获取到上下文
+      var ctx3 = c3.getContext("2d");
+
+      //画圆
+       ctx3.beginPath();
+       ctx3.arc(95,50,40,0,2*Math.PI);  //arc(x,y,r,start,stop) 
+       ctx3.stroke();
+
+      //=================================================================================
+
+      //===================================写字======================================
+      //获取到元素
+      var c4 = document.getElementById("wordcanvas");
+
+      //获取到上下文
+      var ctx4 = c4.getContext("2d");
+
+      //写字
+
+      ctx4.font="30px Arial";  //设置字体
+      ctx4.fillText("Hello World",10,50);  //写实心字
+      ctx4.strokeText("Hello World",10,100);  //写空心字
+
+       
+
+      //=================================================================================
+
+      //===================================渐变颜色======================================
+      //获取到元素
+      var c5 = document.getElementById("gradient");
+
+      //获取到上下文
+      var ctx5 = c5.getContext("2d");
+
+      //颜色渐变
+     //var grd=ctx5.createLinearGradient(0,0,200,0);
+	//grd.addColorStop(0,"red");
+	//grd.addColorStop(1,"white");
+
+	// Fill with gradient
+	//ctx5.fillStyle=grd;
+	//ctx5.fillRect(10,10,150,40);
+
+	var grd1=ctx5.createRadialGradient(75,50,5,90,60,100);
+	grd1.addColorStop(0,"red");
+	grd1.addColorStop(1,"white");
+
+	// Fill with gradient
+	ctx5.fillStyle=grd1;
+	ctx5.fillRect(10,10,150,80);
+
+       
+
+      //=================================================================================
+
+
+      //===================================t图片======================================
+      //获取到元素
+      var c6 = document.getElementById("image");
+
+      //获取到上下文
+      var ctx6 = c6.getContext("2d");
+
+      var img=document.getElementById("scream");
+
+      img.onload = function() {
+        ctx6.drawImage(img,0,0);
+      } 
+
+       
+
+      //=================================================================================
+
+
+
+   </script>
+</html>

@@ -1,0 +1,29 @@
+<!-- html5 标准声明-->
+<!DOCTYPE html>
+<html>
+  <head>
+
+  	 <!--设置字符集编码-->
+     <meta charset="utf-8">
+     <title>Html5 demo01</title>
+     
+     <style type="text/css">
+      myhero{
+      	display: block;
+      	background-color: #ddd;
+      	padding: 50px;
+      	font-size: 30px;
+      }
+     </style>
+     <body>
+         <h1>我的第一个标题</h1>
+         <p>我的第一个段落</p>
+         <myhero>我的第一个新元素</myhero>
+     </body>
+  </head>
+  <script type="text/javascript">
+       document.createElement("myhero");//为了兼容IE浏览器
+       var myhero = document.getElementsByTagName("myhero")[0];
+       alert(myhero.innerHTML);
+     </script>
+</html>
