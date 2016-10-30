@@ -1,0 +1,124 @@
+
+/*new box item style*/
+.areabox{
+    width: 674px;
+    min-height: 520px;
+    margin-left: 20px;
+    margin-top: 14px;
+}
+
+
+.areabox .title{
+	width: 668px;
+	height: 35px;
+	border-bottom: 1px solid #d1d0cc;
+	background: url(../image/content_right_item.jpg) no-repeat;
+	position: relative;
+}
+
+
+.areabox .title .text{
+	display: block;
+	width: 125px;
+	height: 35px;
+	line-height: 35px;
+	color: #ffffff;
+	text-align: center;
+}
+
+
+.areabox .location{
+	margin-left: 200px;
+	color: #000000;
+	right: 0px;
+	top: 15px;
+	position: absolute;
+}
+
+.areabox .location .cur{
+	font-weight: 800;
+}
+
+.areabox .introduct{
+	width: 648px;
+	min-height: 46px;
+	color: #000000;
+	border-bottom: 1px dashed #000000;
+	margin-top: 41px;
+	margin-left: 8px;
+}
+
+.areabox .introduct .i_t{
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.areabox .loginBox{
+    width: 646px;
+    height: 275px;
+    border: 3px solid #d1d0cc;
+    margin-top: 70px;
+    margin-left: 8px;
+    color: #000000;
+}
+
+.areabox .loginBox .l_1{
+	width: 143px;
+	height: 20px;
+	margin: 32px auto 0px;
+	font-weight: 800;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+.areabox .loginBox .l_2{
+	width: 263px;
+	height: 16px;
+	margin: 13px auto 0px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.areabox .loginBox .l_3{
+	width: 372px;
+	height: 64px;
+	margin: 36px auto 0px;
+}
+
+.areabox .loginBox .l_3 .f_1{
+    width: 251px;
+    height: 64px;
+    margin-left: 46px;
+    float: left;
+}
+
+.f_1 .col{
+	margin-top: 8px;
+}
+
+.f_1 .left{
+	margin:10px 10px 0px 10px;
+}
+
+.f_1 .letter{
+   letter-spacing: 10px;
+}
+
+.areabox .loginBox .l_3 .f_2{
+	width: 65px;
+	height: 45px;
+	float: left;
+	margin-top: 8px;
+}
+
+.login_btn{
+	width: 65px;
+	height: 45px;
+	background-color: #949494;
+	-moz-border-radius: 8px;      /* Gecko browsers */
+    -webkit-border-radius: 8px;   /* Webkit browsers */
+    border-radius:8px;            /* W3C syntax */
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+}
