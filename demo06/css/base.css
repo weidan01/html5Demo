@@ -1,5 +1,5 @@
 /*重置元素默认样式*/
-body,div,span,p{
+body,div,span,p,a{
 	padding: 0px;
 	margin: 0px;
 }
